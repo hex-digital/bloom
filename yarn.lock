@@ -838,6 +838,14 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
+"@captaincss/captaincss@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@captaincss/captaincss/-/captaincss-2.3.0.tgz#1247d4a67ec9266a1b0e643385513590bae334e2"
+  integrity sha512-MkPYc8cqQLGxjeixy0G3pPd59iTBmkS0rE6TUzKTJOhuIRnOfprjYrT7pH2y1ajgoLZtUx4iTj45D0W+vCczIg==
+  dependencies:
+    lodash "^4.17.20"
+    reduce-css-calc "^2.1.8"
+
 "@discoveryjs/json-ext@^0.5.0":
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/@discoveryjs/json-ext/-/json-ext-0.5.2.tgz#8f03a22a04de437254e8ce8cc84ba39689288752"
