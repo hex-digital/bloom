@@ -25,10 +25,11 @@ Any and all features can be disabled if you prefer, so even if you disagree with
 ## Features
 
 - Environment variables, powered by [env](oscarotero/env) and [dotenv](https://github.com/vlucas/phpdotenv).
+- Improved CSS objects and extra utilities, from [CaptainCSS](https://captaincss.hexdigital.com/).
 - Image Lazy Loading, powered by [Vanilla LazyLoad](https://github.com/verlok/vanilla-lazyload).
 
-Note that some of the functionality relies on our [functionality plugin, Sprout](https://github.com/hex-digital/sprout). This should be added to your `mu-plugins`.
-If any functionality is enable that relies on Sprout, and Sprout is not found, you'll see an error in the WordPress dashboard.
+Note that some functionality relies on our [functionality plugin, Sprout](https://github.com/hex-digital/sprout). This should be added to your `mu-plugins`.
+If any functionality is enabled that relies on Sprout, and Sprout is not found, you'll see an error in the WordPress dashboard.
 
 See [the Sage repository](https://github.com/roots/sage) for more features from the underlying framework.
 
