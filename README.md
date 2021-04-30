@@ -1,66 +1,36 @@
-<p align="center">
-  <a href="https://roots.io/sage/">
-    <img alt="Sage" src="https://cdn.roots.io/app/uploads/logo-sage.svg" height="100">
-  </a>
-</p>
-
-<p align="center">
-  <a href="LICENSE.md">
-    <img alt="MIT License" src="https://img.shields.io/github/license/roots/sage?color=%23525ddc&style=flat-square" />
-  </a>
-
-  <a href="https://packagist.org/packages/roots/sage">
-    <img alt="Packagist" src="https://img.shields.io/packagist/v/roots/sage.svg?style=flat-square" />
-  </a>
-
-  <a href="https://github.com/roots/sage/actions">
-    <img alt="Build Status" src="https://img.shields.io/github/workflow/status/roots/sage/Main?style=flat-square" />
-  </a>
-
-  <a href="https://twitter.com/rootswp">
-    <img alt="Follow Roots" src="https://img.shields.io/twitter/follow/rootswp.svg?style=flat-square&color=1da1f2" />
-  </a>
-</p>
+# Bloom - Hex Digital
 
 <p align="center">
   <strong>WordPress starter theme with a modern development workflow</strong>
   <br />
-  Built with ❤️
-</p>
-
-<p align="center">
-  <a href="https://roots.io">Official Website</a> | <a href="https://roots.io/docs/sage/">Documentation</a> | <a href="CHANGELOG.md">Change Log</a>
+  Built with 🌯 at [Hex Digital](https://www.hexdigital.com)
 </p>
 
 ## Supporting
 
-**Sage** is an open source project and completely free to use.
+**Bloom** is an open source project and completely free to use.
 
-However, the amount of effort needed to maintain and develop new features and products within the Roots ecosystem is not sustainable without proper financial backing. If you have the capability, please consider donating using the links below:
+However, we highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address [in our website footer](https://www.hexdigital.com/). We publish all received postcards on our virtual postcard wall.
 
-<div align="center">
+**Bloom** wouldn't be possible without the fantastic work by **Roots**, so please consider supporting them with a [sponsorship](https://www.patreon.com/rootsdev).
 
-[![Sponsor on GitHub](https://img.shields.io/static/v1?label=sponsor&message=%E2%9D%A4&logo=GitHub)](https://github.com/sponsors/roots)
-[![Sponsor on Patreon](https://img.shields.io/badge/sponsor-patreon-orange.svg?style=flat-square&logo=patreon")](https://www.patreon.com/rootsdev)
-[![Donate via PayPal](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square&logo=paypal)](https://www.paypal.me/rootsdev)
+## About Bloom
 
-</div>
+Bloom is an opinionated, productivity-driven WordPress starter theme with a modern development workflow.
 
-## About Sage
+We recommend using Bloom if you're looking to spend less time building the same functionality for each project.
 
-Sage is a productivity-driven WordPress starter theme with a modern development workflow.
-
-**The `master` branch currently tracks Sage 10 which is in active development. Looking for Sage 9? [See releases](https://github.com/roots/sage/releases).**
+Any and all features can be disabled if you prefer, so even if you disagree with some of our opinions, it may still be a good fit for you.
 
 ## Features
 
-- Harness the power of [Laravel](https://laravel.com) and its available packages thanks to [Acorn](https://github.com/roots/acorn).
-- Clean, efficient theme templating utilizing [Laravel Blade](https://laravel.com/docs/master/blade).
-- Easy [Browsersync](http://www.browsersync.io/) support alongside asset compilation, concatenating, and minification powered by [Laravel Mix](https://github.com/JeffreyWay/laravel-mix).
-- Out of the box support for [TailwindCSS](https://tailwindcss.com/) and [jQuery](https://jquery.com).
-- A clean starting point for theme styles using [Sass](https://sass-lang.com/).
+- Environment variables, powered by [env](oscarotero/env) and [dotenv](https://github.com/vlucas/phpdotenv).
+- Image Lazy Loading, powered by [Vanilla LazyLoad](https://github.com/verlok/vanilla-lazyload).
 
-See a working example at [roots-example-project.com](https://roots-example-project.com/).
+Note that some of the functionality relies on our [functionality plugin, Sprout](https://github.com/hex-digital/sprout). This should be added to your `mu-plugins`.
+If any functionality is enable that relies on Sprout, and Sprout is not found, you'll see an error in the WordPress dashboard.
+
+See [the Sage repository](https://github.com/roots/sage) for more features from the underlying framework.
 
 ## Requirements
 
@@ -74,18 +44,7 @@ Make sure all dependencies have been installed before moving on:
 
 ## Theme installation
 
-Install Sage using Composer from your WordPress themes directory (replace `your-theme-name` below with the name of your theme):
-
-```sh
-# @ app/themes/ or wp-content/themes/
-$ composer create-project roots/sage your-theme-name
-```
-
-To install the latest development version of Sage, add `dev-master` to the end of the command:
-
-```sh
-$ composer create-project roots/sage your-theme-name dev-master
-```
+Clone the repo into the `themes` directory of your WordPress installation.
 
 ## Theme structure
 
@@ -133,39 +92,38 @@ themes/your-theme-name/   # → Root of your Sage based theme
 
 ## Theme setup
 
+Edit files in `/config` for theme configuration.
+
 Edit `app/setup.php` to enable or disable theme features, setup navigation menus, post thumbnail sizes, and sidebars.
 
 ## Theme development
 
-- Run `yarn` from the theme directory to install dependencies
-- Update `webpack.mix.js` with your local dev URL
+- Run `composer install` from the theme directory to install php dependencies
+- Run `yarn` from the theme directory to install front end dependencies
+- Copy `.env.example` to `.env`, and update  with your local dev URL for browsersync
 
 ### Build commands
 
 - `yarn start` — Compile assets when file changes are made, start Browsersync session
+- `yarn hot` — Same as `start` with hot module reloading
 - `yarn build` — Compile and optimize the files in your assets directory
 - `yarn build:production` — Compile assets for production
 
+## Updating Sage framework
+
+The `upstream` branch tracks Sage 10.
+
+The easiest way to update this theme is to pull in the latest changes from Sage
+into the `upstream` branch, then create a PR from `upstream` to `main`.
+
+This will highlight all Sage changes, as well as any conflicts to solve.
+
 ## Documentation
 
-- [Sage documentation](https://roots.io/sage/docs/)
+Please see the [Sage documentation](https://roots.io/sage/docs/) for the underlying theme.
+
+Documentation for Bloom is in the works.
 
 ## Contributing
 
-Contributions are welcome from everyone. We have [contributing guidelines](https://github.com/roots/guidelines/blob/master/CONTRIBUTING.md) to help you get started.
-
-## Sage sponsors
-
-Help support our open-source development efforts by [becoming a sponsor](https://github.com/sponsors/roots).
-
-<a href="https://kinsta.com/?kaid=OFDHAJIXUDIV"><img src="https://cdn.roots.io/app/uploads/kinsta.svg" alt="Kinsta" width="200" height="150"></a> <a href="https://k-m.com/"><img src="https://cdn.roots.io/app/uploads/km-digital.svg" alt="KM Digital" width="200" height="150"></a> <a href="https://carrot.com/"><img src="https://cdn.roots.io/app/uploads/carrot.svg" alt="Carrot" width="200" height="150"></a> <a href="https://www.c21redwood.com/"><img src="https://cdn.roots.io/app/uploads/c21redwood.svg" alt="C21 Redwood Realty" width="200" height="150"></a> <a href="https://wordpress.com/"><img src="https://cdn.roots.io/app/uploads/wordpress.svg" alt="WordPress.com" width="200" height="150"></a> <a href="https://icons8.com/"><img src="https://cdn.roots.io/app/uploads/icons8.svg" alt="Icons8" width="200" height="150"></a> <a href="https://www.harnessup.com/"><img src="https://cdn.roots.io/app/uploads/harness-software.svg" alt="Harness Software" width="200" height="150"></a> <a href="https://www.codersclan.com/"><img src="https://cdn.roots.io/app/uploads/coders-clan.svg" alt="Coders Clan" width="200" height="150"></a> <a href="https://generodigital.com/"><img src="https://cdn.roots.io/app/uploads/genero.svg" alt="Genero" width="200" height="150"></a> <a href="https://motto.ca/roots"><img src="https://cdn.roots.io/app/uploads/motto.svg" alt="Motto" width="200" height="150"></a>
-
-## Community
-
-Keep track of development and community news.
-
-- Participate on the [Roots Discourse](https://discourse.roots.io/)
-- Follow [@rootswp on Twitter](https://twitter.com/rootswp)
-- Read and subscribe to the [Roots Blog](https://roots.io/blog/)
-- Subscribe to the [Roots Newsletter](https://roots.io/subscribe/)
-- Listen to the [Roots Radio podcast](https://roots.io/podcast/)
+Contributions are welcome from everyone. 
