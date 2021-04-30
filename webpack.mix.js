@@ -1,4 +1,5 @@
 const mix = require('laravel-mix');
+require('dotenv').config();
 require('@tinypixelco/laravel-mix-wp-blocks');
 
 /*
@@ -14,7 +15,7 @@ require('@tinypixelco/laravel-mix-wp-blocks');
 
 mix
   .setPublicPath('./public')
-  .browserSync('sage.test');
+  .browserSync(process.env.BROWSER_SYNC_PROXY || 'localhost');
 
 mix
   .sass('resources/styles/app.scss', 'styles')
